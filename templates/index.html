@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HomeoBot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+        <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="2" width="16" height="20" rx="2" fill="white"/>
+            <path d="M8 6h8v2H8V6Z" fill="#6246ea"/>
+        </svg>
+        <span class="logo-text">HomeoBot</span>
+    </div>
+</header>
+  <main>
+    <section class="hero">
+      <h1 class="main-title">HomeoBot</h1>
+      <p class="subtitle">AI-powered homeopathic consultation assistant for practitioners and students.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="consultationForm" class="consult-form" novalidate>
+        <div class="form-header">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="12" fill="#e3e8fd"/>
+            <path d="M8 6h8v2H8V6z" fill="#6246ea"/>
+          </svg>
+          <span class="form-title">Consultation Form</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input id="age" name="age" type="number" min="0" required placeholder="1-100" />
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="symptoms">Describe Your Symptoms (For best results, please provide clear and detailed symptom descriptions)</label>
+          <textarea id="symptoms" name="symptoms" required   placeholder="e.g. Headache on the right side, throbbing pain, worse in the evening; nausea after eating; mild fever ; fatigue, especially in the afternoon etc...."></textarea>
+        </div>
+
+        <button type="submit" class="recommend-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="4" y="2" width="16" height="20" rx="2" fill="white" opacity="0.8"/>
+            <path d="M8 6h8v2H8V6z" fill="white"/>
+          </svg>
+          Get Recommendations
+        </button>
+
+        <div class="loading" style="display:none;">Loading...</div>
+        <div id="errorMessage" style="display:none;"></div>
+        <div id="results" style="display:none;"></div>
+      </form>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon blue-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="12" fill="#e3e8fd"/>
+            <text x="12" y="16" text-anchor="middle" fill="#6246ea" font-size="14" font-family="Arial" font-weight="bold">1</text>
+          </svg>
+        </div>
+        <h3>Evidence-Based</h3>
+        <p>All recommendations are based on Kent's Repertory and classical homeopathic principles.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon green-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="12" fill="#e3f9ee"/>
+            <text x="12" y="16" text-anchor="middle" fill="#10b981" font-size="14" font-family="Arial" font-weight="bold">2</text>
+          </svg>
+        </div>
+        <h3>AI-Powered</h3>
+        <p>Advanced algorithms analyze your symptoms to find the most suitable homeopathic remedies.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon purple-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="12" fill="#f3e8fd"/>
+            <text x="12" y="16" text-anchor="middle" fill="#a78bfa" font-size="14" font-family="Arial" font-weight="bold">3</text>
+          </svg>
+        </div>
+        <h3>Educational</h3>
+        <p>Perfect for students and practitioners to learn and enhance their homeopathic knowledge.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p><a href="mailto:your.email@example.com" class="footer-email">homeobot1@gmail.com</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Disclaimer</h4>
+      <p>HomeoBot is designed as an educational tool and should not replace professional medical advice.</p>
+    </div>
+  </footer>
+  
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
