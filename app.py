@@ -148,6 +148,6 @@ Format your response as follows:
     except Exception as e:
         app.logger.error(f"Unexpected error in /api/consult: {str(e)}\n{traceback.format_exc()}")
         return jsonify({"error": f"Oops! Something went wrong on our end. Please try again later."}), 500
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
