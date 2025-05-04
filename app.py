@@ -52,17 +52,16 @@ Symptoms: {symptoms}
 Format your response as follows:
 [instruction: Output MUST be clean Markdown with no HTML, inline CSS, colors, or excessive formatting (e.g., *** or ****). Use exactly two asterisks (**) for bold text (section titles, remedy names, and 'Total' in table). Ensure table columns are aligned with consistent spacing (pad each column to 12 characters). Use only the structure below, with no extra text or deviations. Replace placeholders with actual data.]
 ## Repertorization Table
-| you have to give all rubrics on the given symptoms            |  Remedy 1  | Remedy 2   | Remedy 3   | Remedy 4   | Remedy 5   |sooo on....|
-|---------------------------------------------------------------|------------|------------|------------|------------|------------|
-| [rubric 1]                                                    | [score]    | [score]    | [score]    | [score]    | [score]    |
-| [rubric 2]                                                    | [score]    | [score]    | [score]    | [score]    | [score]    |
-| [rubric 3]                                                    | [score]    | [score]    | [score]    | [score]    | [score]    |
-| [rubric 4]                                                    | [score]    | [score]    | [score]    | [score]    | [score]    |
-| [.]                                                           | [score]    | [score]    | [score]    | [score]    | [score]    |
-| [.]                                                           | [score]    | [score]    | [score]    | [score]    | [score]    |
-| [.]  soo on ......                                            | [score]    | [score]    | [score]    | [score]    | [score]    |
-|you have to give all rubrics on the given symptoms             |    .       |       
-| **Total**                                                     | **[score]**| **[score]**| **[score]**| **[score]**| **[score]**|
+| Symptom            |  Remedy 1  | Remedy 2   | Remedy 3   | Remedy 4   | Remedy 5   |sooo on....|
+|--------------------|------------|------------|------------|------------|------------|
+| [Symptom 1]        | [score]    | [score]    | [score]    | [score]    | [score]    |
+| [Symptom 2]        | [score]    | [score]    | [score]    | [score]    | [score]    |
+| [Symptom 3]        | [score]    | [score]    | [score]    | [score]    | [score]    |
+| [Symptom 4]        | [score]    | [score]    | [score]    | [score]    | [score]    |
+| [.]                | [score]    | [score]    | [score]    | [score]    | [score]    |
+| [.]                | [score]    | [score]    | [score]    | [score]    | [score]    |
+| [.]  soo on ...... | [score]    | [score]    | [score]    | [score]    | [score]    |
+| **Total**          | **[score]**| **[score]**| **[score]**| **[score]**| **[score]**|
 
 ## Rubrics
 - **[Rubric 1]** ([Source], [Section], [Subsection], [page number]): [Remedy] ([score])
