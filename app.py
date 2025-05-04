@@ -63,6 +63,13 @@ Format your response as follows:
 | [.]  soo on ...... | [score]    | [score]    | [score]    | [score]    | [score]    |
 | **Total**          | **[score]**| **[score]**| **[score]**| **[score]**| **[score]**|
 
+## Rubrics
+- **[Rubric 1]** ([Source], [Section], [Subsection], page [page number]): [Remedy] ([score])
+- **[Rubric 2]** ([Source], [Section], [Subsection], page [page number]): [Remedy] ([score])
+- **[Rubric 3]** ([Source], [Section], [Subsection], page [page number]): [Remedy] ([score])
+- **[Rubric 4]** ([Source], [Section], [Subsection], page [page number]): [Remedy] ([score])
+- ...
+
 ## Remedy Selection
 **Best Remedy**: **[REMEDY_NAME]**
 - Justification: [Brief justification based on table scores, 1-2 sentences. If no clear remedy, state 'No clear remedy selection possible'.]
